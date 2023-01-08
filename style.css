@@ -1,0 +1,219 @@
+:root {
+  --clr-primary: hsla(184, 90%, 46%, 1);
+
+  --clr-second: hsla(0, 0%, 7%, 1);
+
+  --clr-neutral-400: hsla(0, 0%, 100%, 0.4);
+  --clr-neutral-500: hsla(0, 0%, 100%, 0.5);
+  --clr-neutral: hsl(0, 0%, 100%);
+
+  --font-family-primary: "Raleway", sans-serif;
+
+  --ff-body: var(--font-family-primary);
+  --ff-heading: var(--font-family-primary);
+
+  --fw-bold: 700;
+  --fw-semi-bold: 500;
+  --fw-regular: 400;
+
+  --fs-200: 1.125rem; /* 18px */
+  --fs-300: 1.25rem; /* 20px */
+  --fs-400: 1.5625rem; /* 25px */
+  --fs-450: 1.875rem; /* 30px */
+  --fs-500: 2.5rem; /* 40px */
+  --fs-600: 3.125rem; /* 50px */
+  --fs-900: 9.375rem; /* 150px */
+
+  --fs-button: 1rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: var(--clr-second);
+  color: var(--clr-neutral);
+  font-family: var(--font-family-primary);
+  background-image: url("images/line.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  --width: 1630px;
+  --padding: 1rem;
+  width: min(var(--width), 100% - var(--padding) * 2);
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  height:6.9375rem;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(4.5px);
+}
+
+
+.active-link{
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary);
+}
+
+
+.logo h1 a{
+  color: var(--clr-primary);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-400);
+}
+
+.navigation{
+  display: flex;
+  gap: 3.75rem;
+}
+
+
+.navigation li a{
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral);
+}
+
+
+.main_flex{
+  position: relative;
+}
+
+
+/* slider */
+.header_galery{
+  height: 100vh;
+}
+
+
+
+.main_galery{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+  width: 100%;
+}
+
+
+.main_galery > div{
+  width: 50%;
+  height: 100%;
+}
+
+
+
+.images_shr{
+  position: relative; 
+}
+
+.images_shr img{
+ position: absolute;
+}
+
+
+
+
+
+
